@@ -1,0 +1,44 @@
+components:
+    schemas:
+        createorder:
+            type: object
+            required:
+                - sender_name
+                - recipient_name
+                - origin
+                - destination
+            properties:
+                sender_name:
+                    type: string
+                    example: Full Name
+                recipient_name:
+                    type: string
+                    example: Full Name
+                origin:
+                    type: string
+                    example: Jakarta
+                destination:
+                    type: string
+                    example: Bandung
+
+        updateorderstatus:
+            type: object
+            required:
+                - status
+                - location
+                - description
+            properties:
+                status:
+                    type: string
+                    enum:
+                        - Pending
+                        - In Transit
+                        - Delivered
+                        - Canceled
+                    example: In Transit
+                location:
+                    type: string
+                    example: Sorting Center Jakarta
+                description:
+                    type: string
+                    example: Package is being processed
