@@ -107,6 +107,13 @@ export const updateOrderStatusService = async (
         throw new CustomError(`Order not found`, 404);
     }
 
+    if (checkOrder.status === 'Delivered') {
+        throw new CustomError(
+            `Order has been delivered and order status can't be updated`,
+            400,
+        );
+    }
+
     return await DB.sequelize.transaction(async tr => {
         await repo.updateOrderStatus(
             orderId,

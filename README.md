@@ -29,21 +29,34 @@ Make sure you have installed the following tools:
    bun i
    ```
 
-3. Use the `.env.development` to store the environment configuration:
+3. Use the existing `.env.development` to store the environment configuration:
 
    ```bash
    .env.development
    ```
 
+## Run the database migration
+   ```bash
+      npm run migration
+      #or
+      bun run migration
+   ```
+
+## Run the database seeder to use the existing sample data
+   ```bash
+      npx sequelize-cli db:seed:all
+      #or
+      bunx --bun sequelize-cli db:seed:all
+   ```
+
 ## 🏃 Run the server and the test
 
 Run the server in the development mode:
-
-```bash
-npm run dev
-#or
-bun run dev
-```
+   ```bash
+   npm run dev
+   #or
+   bun run dev
+   ```
 
 Or in the production mode
 
