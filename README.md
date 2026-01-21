@@ -49,6 +49,12 @@ Make sure you have installed the following tools:
       bunx --bun sequelize-cli db:seed:all
    ```
 
+## Use the existing user account after seeding the seeders
+   ```bash
+      email: admin@example.com
+      password: Admin@123
+   ```
+
 ## 🏃 Run the server and the test
 
 Run the server in the development mode:
