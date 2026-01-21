@@ -55,7 +55,7 @@ Make sure you have installed the following tools:
       password: Admin@123
    ```
 
-## 🏃 Run the server and the test
+## 🏃 Run the server
 
 Run the server in the development mode:
    ```bash
